@@ -2,17 +2,17 @@
 
 ls -R 				#view Child Directory
 mkdir -vp /dir1/dir2/dir3	#-v for verbose and p for parent directory, so we can create folder in hierarchical
-cd 				#for home directory
-cd - 				#previous working directory
-cd .. 				#one step backward
-touch 				#create empty file, or change timestamp make sure data will not destroy if use touch with existing file
+cd 				                #for home directory
+cd - 				              #previous working directory
+cd .. 				            #one step backward
+touch 				            #create empty file, or change timestamp make sure data will not destroy if use touch with existing file
 
-head -2 filename 		#view only first 2 line from the file, by default first 10 line
-tail -2 filename 		#view only last 2 line from the file, by default first 10 line
-stat filename 			#shows filename.second line file size, Third line shows Inode number and no.of links to that inode,owner(Uid),group(Gid),access,modified(file containt),change(metadata like permition).
+head -2 filename 		      #view only first 2 line from the file, by default first 10 line
+tail -2 filename 		      #view only last 2 line from the file, by default first 10 line
+stat filename 		      	#shows filename.second line file size, Third line shows Inode number and no.of links to that -inode,owner(Uid),group(Gid),access,modified(file containt),change(metadata like permition).
 
-cp -vr dir2/*.txt dir2/dir3	#copy all files ending with ".txt" from dir2 into dir2/dir3.
+cp -vr dir2/*.txt dir2/dir3	    #copy all files ending with ".txt" from dir2 into dir2/dir3.
 cp -v hello.txt dir2/file2.txt 	#copy hello.txt into dir2 at the same time, rename it as "file2.txt".
-md5sum hello.txt 		#When transfering a file from machine to another or downloading files from internet,to verify the file integrity compare md5sum on source and destination machine
+md5sum hello.txt 		            #When transfering a file from machine to another or downloading files from internet,to verify the file integrity compare md5sum on source and destination machine
 
 ln -s dir2/dir3/dir4/hi.txt linkname #create softlink like Sortcut file, By default create hard link withous -s (same inode)
